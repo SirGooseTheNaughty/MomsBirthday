@@ -1,0 +1,9 @@
+button.disabled {
+    pointer-events: none;
+}
+button.disabled.right {
+    background-color: greenyellow;
+}
+button.disabled:not(.right) {
+    background-color: red;
+}
