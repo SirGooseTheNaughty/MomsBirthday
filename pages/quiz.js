@@ -1,7 +1,7 @@
 const letters = [
-    'в - ვ',
-    'о - ო',
-    'р - რ',
+    'ვ - в',
+    'ო - о',
+    'რ - р',
 ];
 let correct = 0;
 
@@ -60,18 +60,22 @@ document.querySelector('.btn-9').addEventListener('click', () => {
         heading.textContent = 'Шок';
         points.textContent = '0 баллов, это как вообще... Я дам вам все буквы, не мучайтесь'
         lettersElement.textContent = `${letters.join(', ')} (не запоминать можьно)`;
-    } if (correct < 3) {
+        localStorage.setItem('letters', letters);
+    } else if (correct < 3) {
         heading.textContent = 'Мдааааааааааааааа';
         points.textContent = `Аж целых ${correct} балла... Я дам вам одну буковку.`
         lettersElement.textContent = `${letters[0]} (не запоминать можьно)`;
+        localStorage.setItem('letters', [letters[0]]);
     } else if (correct < 5) {
         heading.textContent = 'Сойдет, но вы могли лучше!';
         points.textContent = `За ${correct} баллов вы получите две буковки. Это немного, но это честная работа`
         lettersElement.textContent = `${letters[0]}, ${letters[1]} (не запоминать можьно)`;
+        localStorage.setItem('letters', [letters[0], letters[1]]);
     } else {
         heading.textContent = 'ЯУШОКЕ';
         points.textContent = `За особые достижения в получении ${correct} баллов вы получите ТРИ буковки!!!`
         lettersElement.textContent = `${letters.join(', ')} (не запоминать можьно)`;
+        localStorage.setItem('letters', letters);
     }
 
     resBlock.classList.remove('hidden');
