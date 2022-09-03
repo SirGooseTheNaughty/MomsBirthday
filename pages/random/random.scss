@@ -1,0 +1,51 @@
+body {
+    overflow: hidden;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    &.intro > div,
+    &.description > div,
+    &.result > div {
+        position: relative;
+        top: -10%;
+        height: 30%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &.quiz {
+        justify-content: flex-start;
+    }
+}
+
+.runner {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.counter,
+.timer {
+    font-size: 40px;
+    position: absolute;
+    pointer-events: none;
+}
+.counter {
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.timer {
+    top: 5%;
+    right: 5%;
+}

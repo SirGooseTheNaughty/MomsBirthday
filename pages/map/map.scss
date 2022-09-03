@@ -1,0 +1,82 @@
+body {
+    background: radial-gradient(43.61% 43.61% at 50% 56.39%, #FFFEF2 0%, #EDF0DE 100%);
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    &.intro > div,
+    &.description > div,
+    &.result > div {
+        position: relative;
+        top: -10%;
+        height: 30%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &.quiz {
+        justify-content: flex-start;
+    }
+}
+
+.quiz {
+    .field {
+        margin-top: 60px;
+        display: flex;
+    }
+
+    .map,
+    .controls {
+        width: 45vw;
+    }
+
+    .controls {
+        margin-left: 5vw;
+
+        .prompt {
+            max-height: 50vh;
+        }
+
+        .conclusion {
+            &.good {
+                color: #417D34;
+            }
+            &.ok {
+                color: orange;
+            }
+            &.bad {
+                color: red;
+            }
+        }
+    }
+
+    .map {
+        position: relative;
+        --x: -100000px;
+        --y: 20px;
+
+        img {
+            width: 100%;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            top: var(--y);
+            left: var(--x);
+            transform: translate(-50%,-50%);
+            background-color: red;
+        }
+    }
+}

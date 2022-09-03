@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="./map.css">
+</head>
+<body>
+    <div class="section intro">
+        <div>
+            <img src="./assets/trips.png" alt="">
+            <p style="margin-top: 10%">Настоящие Воробьевы (кроме меня) помнят все свои путешествия!</p>
+            <p>Так-то мы точно все и выясним, вот так-то</p>
+            <button class="btn-1 slanty">Не страшно!</button>
+        </div>
+    </div>
+    <div class="section description hidden">
+        <div>
+            <h2>Что же буит?</h2>
+            <p>Я вам фотку — вы мне тык на карте. Чем ближе — тем вы Воробьевее</p>
+            <button class="btn-2 slanty">Ща как тыкнем!</button>
+        </div>
+    </div>
+    <div class="section quiz hidden">
+        <div>
+            <h2>Потыкулечки</h2>
+            <div class="field">
+                <div class="map">
+                    <img src="./assets/map.png" alt="">
+                </div>
+                <div class="controls">
+                    <p class="caption">Начнем попроще!</p>
+                    <img class="prompt" src="./assets/cairo.jpg" alt="">
+                    <div class="forward hidden">
+                        <p class="conclusion good"></p>
+                        <button class="next">Дальше!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section result hidden">
+        <div>
+            <h2></h2>
+            <p class="points"></p>
+            <p class="letters"></p>
+            <a href="../random/random.html"><button>ДАЛЬШЕЕЕЕ!!!</button></a>
+        </div>
+    </div>
+
+    <script src="./map.js"></script>
+</body>
+</html>

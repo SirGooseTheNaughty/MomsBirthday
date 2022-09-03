@@ -31,26 +31,57 @@ const mapBtns = [
         blockSelector: '.q7',
     },
 ];
+const questions = document.querySelectorAll('.question');
+let qn = 0;
+
+questions.forEach(qb => {
+    const res = {
+        right: qb.querySelector('.res.right'),
+        wrong: qb.querySelector('.res.wrong'),
+    };
+    const btns = qb.querySelectorAll('button.answer');
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.classList.contains('right')) {
+                res.right.classList.remove('hidden');
+                btn.classList.add('colored-right');
+                correct += 1;
+            } else {
+                res.wrong.classList.remove('hidden');
+                btn.classList.add('colored-wrong');
+                qb.querySelector('button.answer.right').classList.add('colored-right');
+            }
+            btns.forEach(btn => btn.classList.add('blocked'));
+        });
+    })
+});
+
+document.querySelectorAll('button.next').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        qn += 1;
+        questions[qn].classList.remove('hidden');
+    });
+});
 
 document.querySelector('.btn-1').addEventListener('click', () => document.querySelector('.description').classList.remove('hidden'));
 document.querySelector('.btn-2').addEventListener('click', () => document.querySelector('.q1').classList.remove('hidden'));
 
-mapBtns.forEach(({ btnSelector, blockSelector }) => {
-    document.querySelectorAll(btnSelector).forEach(btn => {
-        const block = document.querySelector(blockSelector);
-        btn.addEventListener('click', function () {
-            if (this.classList.contains('right')) {
-                block.querySelector('h2.right').classList.remove('hidden');
-                block.querySelector('h2.wrong').classList.add('hidden');
-                correct += 1;
-            }
-            block.classList.remove('hidden');
-            btn.classList.add('disabled');
-        });
-    });
-});
+// mapBtns.forEach(({ btnSelector, blockSelector }) => {
+//     document.querySelectorAll(btnSelector).forEach(btn => {
+//         const block = document.querySelector(blockSelector);
+//         btn.addEventListener('click', function () {
+//             if (this.classList.contains('right')) {
+//                 block.querySelector('h2.right').classList.remove('hidden');
+//                 block.querySelector('h2.wrong').classList.add('hidden');
+//                 correct += 1;
+//             }
+//             block.classList.remove('hidden');
+//             btn.classList.add('disabled');
+//         });
+//     });
+// });
 
-document.querySelector('.btn-9').addEventListener('click', () => {
+const handleRes = () => {
     const resBlock = document.querySelector('.result');
     const heading = resBlock.querySelector('h2');
     const points = resBlock.querySelector('.points');
@@ -63,7 +94,7 @@ document.querySelector('.btn-9').addEventListener('click', () => {
         localStorage.setItem('letters', letters);
     } else if (correct < 3) {
         heading.textContent = 'Мдааааааааааааааа';
-        points.textContent = `Аж целых ${correct} балла... Я дам вам одну буковку.`
+        points.textContent = `Аж целых ${correct}... Я дам вам одну буковку.`
         lettersElement.textContent = `${letters[0]} (не запоминать можьно)`;
         localStorage.setItem('letters', [letters[0]]);
     } else if (correct < 5) {
@@ -79,4 +110,6 @@ document.querySelector('.btn-9').addEventListener('click', () => {
     }
 
     resBlock.classList.remove('hidden');
-});
+}
+
+[...document.querySelectorAll('.btn-9')].forEach(btn => btn.addEventListener('click', handleRes));

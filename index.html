@@ -6,55 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy birthday tooo yooo</title>
     <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="congrats">
-        <h1>С днем рождения, мамулечка!!!</h1>
-        <p>Мы желаем тебе всего самого-самого хорошего и все такое...</p>
-        <p>
-            Не будем размусоливать, мы все тут люди занятые.
-            Подарок на следующей странице, мжи кнопку и переходи, никакого подвоха.
-        </p>
-        <button class="btn-1">За подарком!</button>
+    <div class="congrats fullscreen hidden">
+        <img class="mom" src="./assets/mom.png" alt="">
+        <div class="texts">
+            <p>Мы желаем тебе всего самого-самого хорошего и все такое...</p>
+            <p>
+                Не будем размусоливать, мы все тут люди занятые.
+                Подарок на следующей странице, мжи кнопку и переходи, никакого подвоха.
+            </p>
+        </div>
+        <img class="btn-1" src="./assets/get-gift.png" alt="">
     </div>
 
     <div class="stoprightthere hidden">
-        <h2>Разогнались!</h2>
-        <p>А вдруг ты воришка, который пришел за подарком?!</p>
-        <p>Мы обезопасили доступ! Нужно ввести пароль (он за следующей кнопкой). Все просто, не трусить.</p>
-        <button class="btn-2">За паролем!</button>
+        <div class="content">
+            <img class="mom" src="./assets/not-so-fast.png" alt="">
+            <div class="texts">
+                <p>А вдруг ты воришка, который пришел за подарком?!</p>
+                <p>Мы обезопасили доступ! Нужно ввести пароль (он за следующей кнопкой). Все просто, не трусить.</p>
+            </div>
+            <img class="btn-2" src="./assets/get-password.png" alt="">
+            <img class="detective" src="./assets/detective.png" alt="">
+        </div>
     </div>
 
     <div class="password hidden">
-        <h2>Ну наконец-то</h2>
-        <p>Вводить сюды: 
-            <input type="text">
-        </p>
-        <p>Пароль: ვი ფუფ ჩისფო კოწკრეფწო?</p>
-        <p class="wow">
-            <span class="first hidden">Стоп.</span>
-            <button class="second btn-3 hidden">Чего?</button>
-        </p>
+        <div class="content">
+            <div class="texts">
+                <p>Вводить сюды:</p>
+                <p><input type="text"></p>
+                <p>Пароль: ვი თუთ ჩისთო კონკრეთნო?</p>
+            </div>
+            <img class="btn-3 hidden" src="./assets/btn-3.png" alt="">
+            <img class="loh hidden" src="./assets/loh.png" alt="">
+            <img class="wat hidden" src="./assets/wat.png" alt="">
+        </div>
     </div>
 
     <div class="explanation hidden">
-        <h2>Пипца</h2>
-        <p>Кажется, из-за сложностей перевода пакет данных поломался при пересылке, и пароль остался закодирован на грузинском...</p>
-        <p>Так дело не пойдет, я ничего не понимаю, как проверить пароль???</p>
-        <button class="btn-4">Что же мы будем делать???</button>
+        <div class="content">
+            <img class="piptsa" src="./assets/piptsa.png" alt="">
+            <p class="left">Кажется, из-за сложностей перевода пакет данных поломался при пересылке, и пароль остался закодирован на грузинском...</p>
+            <p class="right">Так дело не пойдет, я ничего не понимаю, как проверить пароль???</p>
+            <button class="slanty">Что же мы будем делать?</button>
+        </div>
     </div>
 
-    <div class="quest hidden">
-        <h2>Выход есть!</h2>
-        <p>Придется пройти</p>
-        <p class="fancy">
-            <span>К</span>
-            <span>В</span>
-            <span>Е</span>
-            <span>С</span>
-            <span>Т</span>
-        </p>
-        <a href="./pages/quiz.html"><button class="btn-5">ПОГНАЛИ!!!!!!</button></a>
+    <div class="quest ">
+        <div class="content">
+            <div>
+                <p>Выход есть!</p>
+                <p>Придется пройти</p>
+            </div>
+            <img src="./assets/quest.png" alt="">
+            <a href="./pages/quiz.html">
+                <button class="slanty">Погнали!</button>
+            </a>
+        </div>
     </div>
 
     <script src="index.js"></script>

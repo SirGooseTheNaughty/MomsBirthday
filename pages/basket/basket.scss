@@ -1,0 +1,44 @@
+body {
+    background: radial-gradient(43.61% 43.61% at 50% 56.39%, #FFFEF2 0%, #F0E5DE 100%);
+}
+
+.section {
+    min-height: 100vh;
+    background: radial-gradient(43.61% 43.61% at 50% 56.39%, #FFFEF2 0%, #EDF0DE 100%);
+    display: grid;
+    place-items: center;
+
+    &.intro > div,
+    &.result > div {
+        position: relative;
+        top: -10%;
+        height: 30%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.elements {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.item {
+    width: 40vw;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.item.chosen {
+    border: 1px solid red;
+}
+
+.areyouready {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.result button,
+.intro button {
+    margin-top: 60px;
+}

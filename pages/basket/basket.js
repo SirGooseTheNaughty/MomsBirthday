@@ -10,8 +10,7 @@ const chosen = new Set([]);
 
 document.querySelector('.btn-1').addEventListener('click', () => {
     document.querySelector('.description').classList.remove('hidden');
-    document.querySelector('.elements').classList.remove('hidden');
-    document.querySelector('.areyouready').classList.remove('hidden');
+    document.querySelector('.intro').classList.add('hidden');
 });
 
 items.forEach((item, index) => {
@@ -72,6 +71,7 @@ const getResults = () => {
     });
     resBtn.removeEventListener('click', getResults);
     result(points);
+    window.scrollBy(0, document.body.offsetHeight - document.documentElement.clientHeight);
 }
 
 resBtn.addEventListener('click', getResults);

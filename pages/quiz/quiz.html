@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="./quiz.css">
+</head>
+<body>
+    <div class="intro">
+        <div>
+            <img src="./assets/hoorray.png" alt="">
+            <p>План следующий: если все делать суперпуперски, будут открываться части шифра, и мы сможем декодировать пароль!</p>
+            <button class="btn-1 slanty">Нормуль</button>
+        </div>
+    </div>
+
+    <div class="description hidden">
+        <div>
+            <h2>Первым этапом у нас будет тестик на знание именинницы!</h2>
+            <p>Танцуют все (но, блин, именинница, ты не особо подсказывай, нууу)</p>
+            <button class="btn-2 slanty">Давай уже</button>
+        </div>
+    </div>
+
+    <div class="question q1 hidden">
+        <div>
+            <h2>Начнем с истоков</h2>
+            <p>Во сколько родилася?</p>
+            <div class="buttons">
+                <button class="answer right">1:45</button>
+                <button class="answer">10:51</button>
+                <button class="answer">17:43</button>
+                <button class="answer">20:22</button>
+            </div>
+            <div class="res right hidden">
+                <p>Ничоси вы секундомеры</p>
+                <button class="next">А то</button>
+            </div>
+            <div class="res wrong hidden">
+                <p>Ну не расстраивайтесь, вот если бы с вами была бабушка.....</p>
+                <button class="next">Если бы...</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="question q2 hidden">
+        <div>
+            <h2>Девчачьи вопросы: мамины любимые цветочки?</h2>
+            <p>p.s. если мама скажет, что не эти - это не мама, вяжите ее</p>
+            <div class="buttons">
+                <button class="answer right">Сирень</button>
+                <button class="answer">101 роза</button>
+                <button class="answer">Шиповник</button>
+                <button class="answer">Укроп</button>
+            </div>
+            <div class="res right hidden">
+                <p>Фух, пронесло</p>
+                <button class="next">Ходим по краю!</button>
+            </div>
+            <div class="res wrong hidden">
+                <p>Ну вы хоть ее связали?</p>
+                <button class="next">Говорит, это ты дурак</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="question q3 hidden">
+        <div>
+            <h2>Продолжаем по предпочтениям</h2>
+            <p>Какие фруктики-то мама любит?</p>
+            <div class="buttons">
+                <button class="answer">Персички</button>
+                <button class="answer">Бананчики</button>
+                <button class="answer right">Абрикосики</button>
+                <button class="answer">Апельсинчики</button>
+            </div>
+            <div class="res right hidden">
+                <p>Любит-любит!</p>
+                <button class="next">Ты еще похлопывание по карману вспомни</button>
+            </div>
+            <div class="res wrong hidden">
+                <p>Тю, не знаете классику...</p>
+                <button class="next">*перерыв на вспомнить мем*</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="question q4 hidden">
+        <div>
+            <h2>Переходим на отношения с детьми</h2>
+            <p>Кто тут не Серый?</p>
+            <div class="buttons">
+                <button class="answer">Свиноконь</button>
+                <button class="answer right">Сынулечка</button>
+                <button class="answer">Зайчик-психопатик</button>
+                <button class="answer">Сергушонок</button>
+            </div>
+            <div class="res right hidden">
+                <p>А так хотелось бы!</p>
+                <button class="next">Обнимемся?</button>
+            </div>
+            <div class="res wrong hidden">
+                <p>Ха-ха, сынулечка мамулечки :(</p>
+                <button class="next">Зато "папец" вечен</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="question q5 hidden">
+        <div>
+            <h2>Еще по детям</h2>
+            <p>Санин лучший рисунок по версии мамы?</p>
+            <div class="buttons">
+                <button class="answer">Самоед</button>
+                <button class="answer">Pose</button>
+                <button class="answer">Превращения / Чистилище</button>
+                <button class="answer right">«У нее все депрессивно, а я хочу радости!»</button>
+            </div>
+            <div class="res right hidden">
+                <p>Мда, очень приятно</p>
+                <button class="next">Гениев никогда не целили при жизни</button>
+            </div>
+            <div class="res wrong hidden">
+                <p>Он и правда хорош!</p>
+                <button class="next">(но маму вы знаете не очень)</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="question q6 hidden">
+        <div>
+            <h2>И как повелось, последний вопрос — с тремя звездочками</h2>
+            <p>Что из этого — камень маминого знака зодиака?????</p>
+            <div class="buttons">
+                <button class="answer right">Нефрит</button>
+                <button class="answer">Рубин</button>
+                <button class="answer">Янтарь</button>
+                <button class="answer">Бижутерия :)</button>
+            </div>
+            <div class="res right hidden">
+                <p>Спасибо, дед!</p>
+                <button class="btn-9">Ну что там результаты???</button>
+            </div>
+            <div class="res wrong hidden">
+                <p>Да ладно, звездочки же...</p>
+                <button class="btn-9">Ну что там результаты???</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="result hidden">
+        <div>
+            <h2>ЯУШОКЕ</h2>
+            <p class="points"></p>
+            <p class="letters"></p>
+            <a href="../basket/basket.html"><button>Дём дальше!</button></a>
+        </div>
+    </div>
+
+    <script src="./quiz.js"></script>
+</body>
+</html>
