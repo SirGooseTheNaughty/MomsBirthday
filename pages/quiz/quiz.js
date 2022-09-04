@@ -83,7 +83,7 @@ document.querySelector('.btn-2').addEventListener('click', () => document.queryS
 
 const handleRes = () => {
     const resBlock = document.querySelector('.result');
-    const heading = resBlock.querySelector('h2');
+    const heading = resBlock.querySelector('.heading');
     const points = resBlock.querySelector('.points');
     const lettersElement = resBlock.querySelector('.letters');
 
@@ -99,7 +99,7 @@ const handleRes = () => {
         localStorage.setItem('letters', [letters[0]]);
     } else if (correct < 5) {
         heading.textContent = 'Сойдет, но вы могли лучше!';
-        points.textContent = `За ${correct} баллов вы получите две буковки. Это немного, но это честная работа`
+        points.textContent = `За ${correct} вы получите две буковки. Это немного, но это честная работа`
         lettersElement.textContent = `${letters[0]}, ${letters[1]} (не запоминать можьно)`;
         localStorage.setItem('letters', [letters[0], letters[1]]);
     } else {

@@ -19,17 +19,26 @@ button.disabled:not(.right) {
   width: 100%;
   height: 100vh;
   background: radial-gradient(43.61% 43.61% at 50% 56.39%, #FFFEF2 0%, #EDF0DE 100%);
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5%;
 }
 
 .intro > div,
 .description > div,
 .question > div,
 .result > div {
-  position: relative;
-  top: -10%;
   height: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,11 +81,11 @@ button.blocked {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 1rem;
 }
 
 .res {
-  margin-top: 5%;
+  margin-top: 2rem;
   text-align: center;
 }
 /*# sourceMappingURL=quiz.css.map */

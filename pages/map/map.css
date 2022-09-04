@@ -22,8 +22,6 @@ body {
 .section.intro > div,
 .section.description > div,
 .section.result > div {
-  position: relative;
-  top: -10%;
   height: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,7 +45,7 @@ body {
 }
 
 .quiz .field {
-  margin-top: 60px;
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,10 +58,21 @@ body {
 
 .quiz .controls {
   margin-left: 5vw;
+  position: relative;
+}
+
+.quiz .controls .caption {
+  margin: 10px 0;
+  position: absolute;
+  top: -3rem;
 }
 
 .quiz .controls .prompt {
   max-height: 50vh;
+}
+
+.quiz .controls .conclusion {
+  padding: 0;
 }
 
 .quiz .controls .conclusion.good {

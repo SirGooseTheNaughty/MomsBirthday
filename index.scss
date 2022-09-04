@@ -4,6 +4,80 @@ p {
 [class*="btn"] {
     cursor: pointer;
 }
+button {
+    &.purple {
+        background: #CF94E7;
+        box-shadow: inset -3.53787e-16px -5.77778px 5.77778px #C18AD8, inset 3.53787e-16px 5.77778px 5.77778px #DA9CF3;
+    }
+
+    &.btn-1,
+    &.btn-2,
+    &.btn-3 {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &.btn-1::after {
+        width: 50%;
+        height: 120%;
+        bottom: 0;
+        left: 0;
+        background: url('./assets/ribbon.png');
+        transform: translate(-40%, 40%);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &.btn-2::after {
+        width: 30%;
+        height: 80%;
+        bottom: 0;
+        right: 0;
+        background: url('./assets/key.png');
+        transform: translate(40%, 40%);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &.btn-3 {
+        &::before {
+            width: 30%;
+            height: 80%;
+            top: 0;
+            right: 0;
+            background: url('./assets/loh.png');
+            transform: translate(40%, -40%);
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+        }
+        &::after {
+            width: 30%;
+            height: 80%;
+            bottom: 0;
+            left: 0;
+            background: url('./assets/wat.png');
+            transform: translate(-40%, 40%);
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+        }
+
+        &.loh::before {
+            opacity: 1;
+        }
+        &.wat::after {
+            opacity: 1;
+        }
+    }
+}
 
 .congrats {
     background-color: #F9F8EF;;
@@ -14,25 +88,25 @@ p {
     .mom {
         position: fixed;
         bottom: 0;
-        left: 5%;
+        left: 2%;
         height: 70vh;
     }
     .texts {
         position: fixed;
-        bottom: 25%;
-        left: 35%;
+        bottom: 12%;
+        left: 25vw;
         display: flex;
     }
     .texts p:first-child {
-        width: 300px;
+        width: 30vw
     }
     .texts p:last-child {
-        width: 450px;
+        width: 40vw
     }
     .btn-1 {
         position: fixed;
-        bottom: 10%;
-        left: 55%;
+        bottom: 5%;
+        left: 35%;
         color: #F4F3EB;
     }
 }
@@ -68,11 +142,8 @@ p {
     }
     .detective {
         position: fixed;
-        top: 40%;
-        left: 35%;
-    }
-    .btn-2 {
-        transform: translateX(12%);
+        bottom: 10%;
+        left: 25%;
     }
 }
 
@@ -88,10 +159,6 @@ p {
     }
     
     .texts {
-        position: fixed;
-        top: 35%;
-        left: 50%;
-        transform: translateX(-50%);
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -100,27 +167,14 @@ p {
         text-align: center;
     }
     .texts input {
-        width: 415px;
-        height: 59px;
+        width: 20rem;
+        height: 2rem;
         background-color: #FDFFF7;
         border: 1px solid #CF94E7;
         border-radius: 99999px;
     }
     .btn-3 {
-        position: fixed;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .loh {
-        position: fixed;
-        bottom: 14%;
-        left: 55%;
-    }
-    .wat {
-        position: fixed;
-        bottom: 0;
-        left: 40%;
+        margin-top: 50px;
     }
 }
 
@@ -138,7 +192,7 @@ p {
 
     .piptsa {
         position: fixed;
-        top: 30%;
+        top: 25%;
         left: 20%;
     }
     .left {
@@ -155,7 +209,7 @@ p {
     }
     .btn-4 {
         position: fixed;
-        top: 60%;
+        top: 65%;
         left: 50%;
     }
 }
@@ -168,16 +222,36 @@ p {
         background-image: url('./assets/quest-bg.png');
         background-repeat: no-repeat;
         background-size: 100% auto;
-        height: 100%;
+        height: 60%;
         display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: space-between;
-        padding: 12% 0;
+        padding: 5% 0;
         box-sizing: border-box;
 
         > div {
             text-align: center;
+        }
+
+        h1 span {color: #72B065;
+            font-size: 4rem;
+            font-family: 'Freehand575 BT', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            &:nth-child(2) {
+                color: red;
+            }
+            &:nth-child(3) {
+                color: blue;
+            }
+            &:nth-child(4) {
+                color: purple;
+            }
+            &:nth-child(2) {
+                color: orange;
+            }
         }
     }
 }

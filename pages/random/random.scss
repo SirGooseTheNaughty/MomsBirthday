@@ -27,8 +27,8 @@ body {
 }
 
 .runner {
-    width: 300px;
-    height: 150px;
+    width: 4rem;
+    height: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,7 +36,7 @@ body {
 }
 .counter,
 .timer {
-    font-size: 40px;
+    font-size: 2rem;
     position: absolute;
     pointer-events: none;
 }

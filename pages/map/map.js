@@ -13,6 +13,7 @@ const letters = [
     'ჩ - ч',
     'თ - т',
 ];
+const ownedLetters = localStorage.getItem('letters') ? localStorage.getItem('letters').split(',') : [];
 
 const questions = [
     {
@@ -191,7 +192,7 @@ function handleNext() {
 
 function renderResult() {
     const resBlock = document.querySelector('.result');
-    const heading = resBlock.querySelector('h2');
+    const heading = resBlock.querySelector('.heading');
     const points = resBlock.querySelector('.points');
     const lettersElement = resBlock.querySelector('.letters');
     let gotLetters = [];
@@ -220,5 +221,5 @@ function renderResult() {
 
     document.querySelector('.quiz').classList.add('hidden');
     resBlock.classList.remove('hidden');
-    localStorage.setItem('letters', [...ownedLetters, ...gotLetters]);
+    localStorage.setItem('letters', [...new Set([...ownedLetters, ...gotLetters])]);
 }

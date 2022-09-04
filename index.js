@@ -1,3 +1,5 @@
+localStorage.setItem('letters', '');
+
 const gletters = 'ვი ფუფ ჩისფო კოწკრეფწო'.split('');
 
 document.querySelector('.btn-1').addEventListener('click', () => {
@@ -11,10 +13,10 @@ document.querySelector('.btn-2').addEventListener('click', () => {
         document.querySelector('.btn-3').classList.remove('hidden');
     }, 3000);
     setTimeout(() => {
-        document.querySelector('.loh').classList.remove('hidden');
+        document.querySelector('.btn-3').classList.add('loh');
     }, 3500);
     setTimeout(() => {
-        document.querySelector('.wat').classList.remove('hidden');
+        document.querySelector('.btn-3').classList.add('wat');
     }, 4000);
 });
 document.querySelector('.btn-3').addEventListener('click', () => {

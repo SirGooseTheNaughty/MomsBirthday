@@ -12,8 +12,6 @@ body {
     &.intro > div,
     &.description > div,
     &.result > div {
-        position: relative;
-        top: -10%;
         height: 30%;
         display: flex;
         flex-flow: column;
@@ -28,7 +26,7 @@ body {
 
 .quiz {
     .field {
-        margin-top: 60px;
+        margin-top: 2rem;
         display: flex;
     }
 
@@ -39,12 +37,20 @@ body {
 
     .controls {
         margin-left: 5vw;
+        position: relative;
+
+        .caption {
+            margin: 10px 0;
+            position: absolute;
+            top: -3rem;
+        }
 
         .prompt {
             max-height: 50vh;
         }
 
         .conclusion {
+            padding: 0;
             &.good {
                 color: #417D34;
             }

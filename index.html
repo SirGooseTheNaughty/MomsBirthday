@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="congrats fullscreen hidden">
+    <div class="congrats fullscreen">
         <img class="mom" src="./assets/mom.png" alt="">
         <div class="texts">
             <p>Мы желаем тебе всего самого-самого хорошего и все такое...</p>
@@ -18,17 +18,17 @@
                 Подарок на следующей странице, мжи кнопку и переходи, никакого подвоха.
             </p>
         </div>
-        <img class="btn-1" src="./assets/get-gift.png" alt="">
+        <button class="btn-1 slanty purple">За подарком!</button>
     </div>
 
     <div class="stoprightthere hidden">
         <div class="content">
-            <img class="mom" src="./assets/not-so-fast.png" alt="">
+            <h1>Разогнались!</h1>
             <div class="texts">
                 <p>А вдруг ты воришка, который пришел за подарком?!</p>
                 <p>Мы обезопасили доступ! Нужно ввести пароль (он за следующей кнопкой). Все просто, не трусить.</p>
             </div>
-            <img class="btn-2" src="./assets/get-password.png" alt="">
+            <button class="btn-2 slanty purple">За паролем!</button>
             <img class="detective" src="./assets/detective.png" alt="">
         </div>
     </div>
@@ -36,33 +36,38 @@
     <div class="password hidden">
         <div class="content">
             <div class="texts">
+                <h1>Ну наконец-то!</h1>
                 <p>Вводить сюды:</p>
                 <p><input type="text"></p>
-                <p>Пароль: ვი თუთ ჩისთო კონკრეთნო?</p>
+                <p class="disabled">Пароль: ვი თუთ ჩისთო კონკრეთნო?</p>
+                <button class="btn-3 slanty hidden">Стоп, чего?</button>
             </div>
-            <img class="btn-3 hidden" src="./assets/btn-3.png" alt="">
-            <img class="loh hidden" src="./assets/loh.png" alt="">
-            <img class="wat hidden" src="./assets/wat.png" alt="">
         </div>
     </div>
 
     <div class="explanation hidden">
         <div class="content">
-            <img class="piptsa" src="./assets/piptsa.png" alt="">
+            <h1 class="piptsa">Пипца</h1>
             <p class="left">Кажется, из-за сложностей перевода пакет данных поломался при пересылке, и пароль остался закодирован на грузинском...</p>
             <p class="right">Так дело не пойдет, я ничего не понимаю, как проверить пароль???</p>
-            <button class="slanty">Что же мы будем делать?</button>
+            <button class="btn-4 slanty">Что же мы будем делать?</button>
         </div>
     </div>
 
-    <div class="quest ">
+    <div class="quest hidden">
         <div class="content">
             <div>
-                <p>Выход есть!</p>
+                <h1 class="smaller">Выход есть!</h1>
                 <p>Придется пройти</p>
             </div>
-            <img src="./assets/quest.png" alt="">
-            <a href="./pages/quiz.html">
+            <h1>
+                <span>к</span>
+                <span>в</span>
+                <span>е</span>
+                <span>с</span>
+                <span>т</span>
+            </h1>
+            <a href="./pages/quiz/quiz.html">
                 <button class="slanty">Погнали!</button>
             </a>
         </div>

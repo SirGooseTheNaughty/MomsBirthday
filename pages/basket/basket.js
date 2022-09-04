@@ -29,7 +29,7 @@ const resBtn = document.querySelector('.btn-2');
 
 const result = (correct) => {
     const resBlock = document.querySelector('.result');
-    const heading = resBlock.querySelector('h2');
+    const heading = resBlock.querySelector('.heading');
     const points = resBlock.querySelector('.points');
     const lettersElement = resBlock.querySelector('.letters');
     let gotLetters = [];
@@ -57,7 +57,7 @@ const result = (correct) => {
     }
 
     resBlock.classList.remove('hidden');
-    localStorage.setItem('letters', [...ownedLetters, ...gotLetters]);
+    localStorage.setItem('letters', [...new Set([...ownedLetters, ...gotLetters])]);
 }
 
 const getResults = () => {
@@ -67,6 +67,19 @@ const getResults = () => {
             points += 1;
         } else if ([2, 4, 7].includes(index)) {
             points -= 1;
+        }
+    });
+    items.forEach((item, index) => {
+        if ([0, 1, 3, 5, 6].includes(index)) {
+            if (chosen.has(index)) {
+                return item.classList.add('correct');
+            } else {
+                return item.classList.add('missed');
+            }
+        } else {
+            if (chosen.has(index)) {
+                return item.classList.add('wrong');
+            }
         }
     });
     resBtn.removeEventListener('click', getResults);
