@@ -56,8 +56,8 @@ const questions = [
             bad: 'Испугались стражника и убежали!',
         },
         accuracy: {
-            good: 0.025,
-            ok: 0.04,
+            good: 0.04,
+            ok: 0.06,
         }
     },
     {
@@ -134,8 +134,8 @@ function getError(resX, resY) {
 
 function handleResult(result) {
     const accuracy = questions[qn].accuracy || {
-        good: 0.015,
-        ok: 0.03,
+        good: 0.03,
+        ok: 0.05,
     };
     if (result <= accuracy.good) {
         correct += 2;
