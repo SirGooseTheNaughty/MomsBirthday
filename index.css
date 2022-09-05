@@ -81,11 +81,21 @@ button.btn-3.wat::after {
   opacity: 1;
 }
 
-.congrats {
-  background-color: #F9F8EF;
-  background-image: url("./assets/bg.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+.congrats .bg {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.congrats .bg img {
+  height: 100%;
 }
 
 .congrats .mom {
@@ -97,15 +107,16 @@ button.btn-3.wat::after {
 
 .congrats .texts {
   position: fixed;
-  bottom: 12%;
-  left: 25vw;
+  top: 62vh;
+  left: 35vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 60vw;
 }
 
 .congrats .texts p:first-child {
-  width: 30vw;
+  width: 26vw;
 }
 
 .congrats .texts p:last-child {
@@ -114,8 +125,8 @@ button.btn-3.wat::after {
 
 .congrats .btn-1 {
   position: fixed;
-  bottom: 5%;
-  left: 35%;
+  bottom: 7%;
+  left: 35vw;
   color: #F4F3EB;
 }
 
@@ -180,7 +191,8 @@ button.btn-3.wat::after {
 
 .password {
   background: radial-gradient(43.61% 43.61% at 50% 56.39%, #FFFEF2 0%, #EDF0DE 100%);
-  height: 100vh;
+  padding-top: 10vh;
+  height: 90vh;
 }
 
 .password .content {

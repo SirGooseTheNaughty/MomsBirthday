@@ -58,6 +58,7 @@ questions.forEach(qb => {
 
 document.querySelectorAll('button.next').forEach((btn, index) => {
     btn.addEventListener('click', () => {
+        questions[qn].classList.add('hidden');
         qn += 1;
         questions[qn].classList.remove('hidden');
     });
@@ -66,22 +67,8 @@ document.querySelectorAll('button.next').forEach((btn, index) => {
 document.querySelector('.btn-1').addEventListener('click', () => document.querySelector('.description').classList.remove('hidden'));
 document.querySelector('.btn-2').addEventListener('click', () => document.querySelector('.q1').classList.remove('hidden'));
 
-// mapBtns.forEach(({ btnSelector, blockSelector }) => {
-//     document.querySelectorAll(btnSelector).forEach(btn => {
-//         const block = document.querySelector(blockSelector);
-//         btn.addEventListener('click', function () {
-//             if (this.classList.contains('right')) {
-//                 block.querySelector('h2.right').classList.remove('hidden');
-//                 block.querySelector('h2.wrong').classList.add('hidden');
-//                 correct += 1;
-//             }
-//             block.classList.remove('hidden');
-//             btn.classList.add('disabled');
-//         });
-//     });
-// });
-
 const handleRes = () => {
+    questions[qn]?.classList.add('hidden');
     const resBlock = document.querySelector('.result');
     const heading = resBlock.querySelector('.heading');
     const points = resBlock.querySelector('.points');

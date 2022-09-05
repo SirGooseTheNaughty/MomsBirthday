@@ -3,6 +3,10 @@
 
 :root {
     font-size: 4vh;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 2vh;
+    }
 }
 
 body {
@@ -38,6 +42,7 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
     line-height: 140%;
+    color: #417D34;
 }
 a {
     text-decoration: none;
@@ -55,11 +60,6 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-}
-
-p {
-    color: #417D34;
-    padding: 0 2rem;
 }
 [class*="btn"] {
     cursor: pointer;

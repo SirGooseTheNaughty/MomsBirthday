@@ -53,7 +53,7 @@ function checkValue() {
             gotError = true;
             return;
         }
-        if (elem.value === correct[index] || (correct[index] === 'и' && elem.value === 'ы')) {
+        if (elem.value.toLocaleLowerCase() === correct[index] || (correct[index] === 'и' && elem.value.toLocaleLowerCase() === 'ы')) {
             elem.classList.remove('incorrect');
             elem.classList.add('correct');
         } else {
