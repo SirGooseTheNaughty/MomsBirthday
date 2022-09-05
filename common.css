@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-@import url("./assets/freehand.woff");
+@font-face {
+  font-family: "Freehand575 BT";
+  src: url("./assets/freehand.woff");
+}
+
 :root {
   font-size: 4vh;
 }
