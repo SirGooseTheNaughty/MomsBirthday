@@ -79,12 +79,12 @@ const handleRes = () => {
         points.textContent = '0 баллов, это как вообще... Я дам вам все буквы, не мучайтесь'
         lettersElement.textContent = `${letters.join(', ')} (не запоминать можьно)`;
         localStorage.setItem('letters', letters);
-    } else if (correct < 3) {
+    } else if (correct < 4) {
         heading.textContent = 'Мдааааааааааааааа';
         points.textContent = `Аж целых ${correct}... Я дам вам одну буковку.`
         lettersElement.textContent = `${letters[0]} (не запоминать можьно)`;
         localStorage.setItem('letters', [letters[0]]);
-    } else if (correct < 5) {
+    } else if (correct < 7) {
         heading.textContent = 'Сойдет, но вы могли лучше!';
         points.textContent = `За ${correct} вы получите две буковки. Это немного, но это честная работа`
         lettersElement.textContent = `${letters[0]}, ${letters[1]} (не запоминать можьно)`;

@@ -47,6 +47,20 @@ const questions = [
         },
     },
     {
+        caption: 'А тут папцовее!',
+        img: './assets/crimea.jpg',
+        target: { x: 0.75, y: 0.58 },
+        res: {
+            good: 'И как вы разглядели через облака??',
+            ok: 'Ну да, из-за облаков не очень видно...',
+            bad: 'Если заблудились - покричите как индеец!',
+        },
+        accuracy: {
+            good: 0.04,
+            ok: 0.06,
+        }
+    },
+    {
         caption: 'А тут страшнее!',
         img: './assets/ruan.jpg',
         target: { x: 0.31, y: 0.48 },
@@ -61,6 +75,16 @@ const questions = [
         }
     },
     {
+        caption: 'А тут внезапно похоже!',
+        img: './assets/toledo.jpg',
+        target: { x: 0.24, y: 0.70 },
+        res: {
+            good: 'Мы уже пристрелялись к лыцарям',
+            ok: 'Так близко, и так далеко!',
+            bad: 'Понял-понял, все еще страшно',
+        },
+    },
+    {
         caption: 'А тут собачее!',
         img: './assets/taira.jpg',
         target: { x: 0.8, y: 0.6 },
@@ -72,6 +96,20 @@ const questions = [
         accuracy: {
             good: 0.8,
             ok: 1.2,
+        }
+    },
+    {
+        caption: 'А тут рыбнее!',
+        img: './assets/norway.jpg',
+        target: { x: 0.6, y: 0.02 },
+        res: {
+            good: 'Такое не забывается!',
+            ok: 'Забыли бабушку поставить волноваться',
+            bad: 'Я просто так тут с ножом стою??',
+        },
+        accuracy: {
+            good: 0.04,
+            ok: 0.06,
         }
     },
     {
@@ -197,17 +235,17 @@ function renderResult() {
     const lettersElement = resBlock.querySelector('.letters');
     let gotLetters = [];
 
-    if (correct < 4) {
+    if (correct < 6) {
         heading.textContent = 'Географ глобус пропил :)';
         points.textContent = `Ето ${correct}. Берите все, не плачьте`
         lettersElement.textContent = `${letters.join(', ')} (не запоминать можьно)`;
         gotLetters = letters;
-    } else if (correct < 8) {
+    } else if (correct < 10) {
         heading.textContent = 'Для таких в аэропорте Вены есть надписаь "Это Австрия, а не Австралия"';
         points.textContent = `${correct} — получаете букву`
         lettersElement.textContent = `${letters[0]} (не запоминать можьно)`;
         gotLetters = [letters[0]];
-    } else if (correct < 12) {
+    } else if (correct < 14) {
         heading.textContent = 'Вы как папец без карты!';
         points.textContent = `${correct} — даю две буквы`
         lettersElement.textContent = `${letters[0]}, ${letters[1]} (не запоминать можьно)`;

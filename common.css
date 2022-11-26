@@ -3,11 +3,9 @@
   font-family: "Freehand575 BT";
   src: url("./assets/freehand.woff");
 }
-
 :root {
   font-size: 4vh;
 }
-
 @media screen and (min-width: 1200px) {
   :root {
     font-size: 2vh;
@@ -20,7 +18,7 @@ body {
 }
 
 body * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 
@@ -29,18 +27,17 @@ h1 {
   margin-bottom: 1rem;
   color: #72B065;
   font-size: 4rem;
-  font-family: 'Freehand575 BT', sans-serif;
+  font-family: "Freehand575 BT", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
 }
-
 h1.smaller {
   font-size: 3rem;
 }
 
 h2 {
   margin-top: 0;
-  font-family: 'Freehand575 BT', sans-serif;
+  font-family: "Freehand575 BT", sans-serif;
   text-transform: uppercase;
   color: #417D34;
   font-size: 2rem;
@@ -78,7 +75,7 @@ a {
   left: 0;
 }
 
-[class*="btn"] {
+[class*=btn] {
   cursor: pointer;
   margin-top: 1rem;
 }
@@ -90,15 +87,17 @@ button {
   background-color: #72B065;
   border-radius: 10px;
   border: none;
-  -webkit-box-shadow: inset -3.53787e-16px -5.77778px 5.77778px #4F9441, inset 3.53787e-16px 5.77778px 5.77778px #71C460;
-          box-shadow: inset -3.53787e-16px -5.77778px 5.77778px #4F9441, inset 3.53787e-16px 5.77778px 5.77778px #71C460;
+  box-shadow: inset 0px -5.77778px 5.77778px #4F9441, inset 0px 5.77778px 5.77778px #71C460;
   color: #F4F3EB;
   font-size: 1rem;
   cursor: pointer;
 }
-
 button.slanty {
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
+  transform: rotate(-2deg);
 }
-/*# sourceMappingURL=common.css.map */
+
+span.dad {
+  font-family: inherit;
+  font-size: inherit;
+  color: darkgreen;
+}/*# sourceMappingURL=common.css.map */

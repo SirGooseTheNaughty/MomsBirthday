@@ -4,101 +4,64 @@ body {
 
 .section {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.section.intro > div,
-.section.description > div,
-.section.result > div {
+.section.intro > div, .section.description > div, .section.result > div {
   height: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .section.quiz {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .quiz .field {
   margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .quiz .map,
 .quiz .controls {
   width: 45vw;
 }
-
 .quiz .controls {
   margin-left: 5vw;
   position: relative;
 }
-
 .quiz .controls .caption {
   margin: 10px 0;
   position: absolute;
   top: -3rem;
 }
-
 .quiz .controls .prompt {
   max-height: 50vh;
 }
-
 .quiz .controls .conclusion {
   padding: 0;
 }
-
 .quiz .controls .conclusion.good {
   color: #417D34;
 }
-
 .quiz .controls .conclusion.ok {
   color: orange;
 }
-
 .quiz .controls .conclusion.bad {
   color: red;
 }
-
 .quiz .map {
   position: relative;
   --x: -100000px;
   --y: 20px;
 }
-
 .quiz .map img {
   width: 100%;
 }
-
 .quiz .map::after {
-  content: '';
+  content: "";
   display: block;
   width: 12px;
   height: 12px;
@@ -106,8 +69,6 @@ body {
   position: absolute;
   top: var(--y);
   left: var(--x);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: red;
-}
-/*# sourceMappingURL=map.css.map */
+}/*# sourceMappingURL=map.css.map */

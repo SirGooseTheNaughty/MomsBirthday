@@ -2,81 +2,68 @@ p {
   color: #417D34;
 }
 
-[class*="btn"] {
+[class*=btn] {
   cursor: pointer;
 }
 
 button.purple {
   background: #CF94E7;
-  -webkit-box-shadow: inset -3.53787e-16px -5.77778px 5.77778px #C18AD8, inset 3.53787e-16px 5.77778px 5.77778px #DA9CF3;
-          box-shadow: inset -3.53787e-16px -5.77778px 5.77778px #C18AD8, inset 3.53787e-16px 5.77778px 5.77778px #DA9CF3;
+  box-shadow: inset 0px -5.77778px 5.77778px #C18AD8, inset 0px 5.77778px 5.77778px #DA9CF3;
 }
-
 button.btn-1, button.btn-2, button.btn-3 {
   position: relative;
 }
-
 button.btn-1::before, button.btn-1::after, button.btn-2::before, button.btn-2::after, button.btn-3::before, button.btn-3::after {
-  content: '';
+  content: "";
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
 }
-
 button.btn-1::after {
   width: 50%;
   height: 120%;
   bottom: 0;
   left: 0;
   background: url("./assets/ribbon.png");
-  -webkit-transform: translate(-40%, 40%);
-          transform: translate(-40%, 40%);
+  transform: translate(-40%, 40%);
   background-size: contain;
   background-repeat: no-repeat;
 }
-
 button.btn-2::after {
   width: 30%;
   height: 80%;
   bottom: 0;
   right: 0;
   background: url("./assets/key.png");
-  -webkit-transform: translate(40%, 40%);
-          transform: translate(40%, 40%);
+  transform: translate(40%, 40%);
   background-size: contain;
   background-repeat: no-repeat;
 }
-
 button.btn-3::before {
   width: 30%;
   height: 80%;
   top: 0;
   right: 0;
   background: url("./assets/loh.png");
-  -webkit-transform: translate(40%, -40%);
-          transform: translate(40%, -40%);
+  transform: translate(40%, -40%);
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
 }
-
 button.btn-3::after {
   width: 30%;
   height: 80%;
   bottom: 0;
   left: 0;
   background: url("./assets/wat.png");
-  -webkit-transform: translate(-40%, 40%);
-          transform: translate(-40%, 40%);
+  transform: translate(-40%, 40%);
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
 }
-
 button.btn-3.loh::before {
   opacity: 1;
 }
-
 button.btn-3.wat::after {
   opacity: 1;
 }
@@ -86,43 +73,31 @@ button.btn-3.wat::after {
   top: 0;
   width: 100vw;
   height: 60vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .congrats .bg img {
   height: 100%;
 }
-
 .congrats .mom {
   position: fixed;
   bottom: 0;
   left: 2%;
   height: 70vh;
 }
-
 .congrats .texts {
   position: fixed;
   top: 62vh;
   left: 35vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 60vw;
 }
-
 .congrats .texts p:first-child {
   width: 26vw;
 }
-
 .congrats .texts p:last-child {
   width: 40vw;
 }
-
 .congrats .btn-1 {
   position: fixed;
   bottom: 1%;
@@ -134,55 +109,31 @@ button.btn-3.wat::after {
   height: 100vh;
   background: radial-gradient(43.61% 43.61% at 50% 56.39%, #FFFEF2 0%, #FAEAEA 100%);
 }
-
 .stoprightthere .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
   height: 80vh;
   position: relative;
   top: 10vh;
 }
-
 .stoprightthere .texts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column;
+  align-items: center;
   height: 40%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .stoprightthere .texts p {
   text-align: center;
 }
-
 .stoprightthere .texts p:first-child {
   width: 350px;
 }
-
 .stoprightthere .texts p:last-child {
   width: 450px;
 }
-
 .stoprightthere .detective {
   position: fixed;
   bottom: 10%;
@@ -194,31 +145,20 @@ button.btn-3.wat::after {
   padding-top: 10vh;
   height: 90vh;
 }
-
 .password .content {
   background-image: url("./assets/bg-3.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
   height: 100%;
 }
-
 .password .texts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column;
+  align-items: center;
 }
-
 .password .texts p {
   text-align: center;
 }
-
 .password .texts input {
   width: 20rem;
   height: 2rem;
@@ -226,7 +166,6 @@ button.btn-3.wat::after {
   border: 1px solid #CF94E7;
   border-radius: 99999px;
 }
-
 .password .btn-3 {
   margin-top: 50px;
 }
@@ -235,7 +174,6 @@ button.btn-3.wat::after {
   background: radial-gradient(43.61% 43.61% at 50% 56.39%, #FFFEF2 0%, #F0E5DE 100%);
   height: 100vh;
 }
-
 .explanation .content {
   background-image: url("./assets/bg-4.png");
   background-repeat: no-repeat;
@@ -243,27 +181,23 @@ button.btn-3.wat::after {
   height: 100%;
   width: 100%;
 }
-
 .explanation .piptsa {
   position: fixed;
   top: 25%;
   left: 20%;
 }
-
 .explanation .left {
   position: fixed;
   top: 45%;
   left: 20%;
   width: 25%;
 }
-
 .explanation .right {
   position: fixed;
   top: 45%;
   left: 50%;
   width: 25%;
 }
-
 .explanation .btn-4 {
   position: fixed;
   top: 65%;
@@ -274,55 +208,37 @@ button.btn-3.wat::after {
   background: radial-gradient(43.61% 43.61% at 50% 56.39%, #FFFEF2 0%, #EDF0DE 100%);
   height: 100vh;
 }
-
 .quest .content {
   background-image: url("./assets/quest-bg.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
   height: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
   padding: 5% 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .quest .content > div {
   text-align: center;
 }
-
 .quest .content h1 span {
   color: #72B065;
   font-size: 4rem;
-  font-family: 'Freehand575 BT', sans-serif;
+  font-family: "Freehand575 BT", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
 }
-
 .quest .content h1 span:nth-child(2) {
   color: red;
 }
-
 .quest .content h1 span:nth-child(3) {
   color: blue;
 }
-
 .quest .content h1 span:nth-child(4) {
   color: purple;
 }
-
 .quest .content h1 span:nth-child(2) {
   color: orange;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

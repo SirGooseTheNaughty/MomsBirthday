@@ -79,22 +79,15 @@ function renderResult()  {
 
     if (count < 3) {
         heading.textContent = 'Мде';
-        points.textContent = `${count}, я обиделся и ничего вам не дам!`
-        lettersElement.textContent = `${letters.join(', ')} (не запоминать можьно)`;
-        gotLetters = letters;
+        points.textContent = `${count}, я обиделся и хотел отобрать обратно ваши буквы!`
     } else if (count < 10) {
         heading.textContent = 'Какие конкурсы, так и стараемся!';
-        points.textContent = `За ${count}дам вам буковку.`
-        lettersElement.textContent = `${letters[0]} (не запоминать можьно)`;
-        gotLetters = [letters[0]];
+        points.textContent = `За ${count} я не буду отбирать ваши буквы.`
     } else {
         heading.textContent = 'Постарались!';
-        points.textContent = `За ${count} тыков дам две оставшиеся!`
-        lettersElement.textContent = `${letters.join(', ')} (не запоминать можьно)`;
-        gotLetters = letters;
+        points.textContent = `За ${count} можете взять с полки условный пирожок!`
     }
 
-    localStorage.setItem('letters', [...new Set([...ownedLetters, ...gotLetters])]);
     resBlock.classList.remove('hidden');
     document.querySelector('.runner-cont').classList.add('hidden');
 }
