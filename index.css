@@ -83,7 +83,7 @@ button.btn-3.wat::after {
   position: fixed;
   bottom: 0;
   left: 2%;
-  height: 70vh;
+  height: 60vh;
 }
 .congrats .texts {
   position: fixed;
@@ -93,7 +93,7 @@ button.btn-3.wat::after {
   width: 60vw;
 }
 .congrats .texts p:first-child {
-  width: 26vw;
+  width: 25vw;
 }
 .congrats .texts p:last-child {
   width: 40vw;
